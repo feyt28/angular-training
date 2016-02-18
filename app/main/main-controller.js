@@ -4,33 +4,33 @@
 	function MainCtrl ( ) {
 		var self = this;
 
-		self.name = 'faith';
+		self.name    = 'faith';
 		self.nameArr = [ 'faith', 'gomez' ];
 		self.addName = '';
 
 		var config = {
-			'name' : 'John Doe',
-			'email' : 'john.doe@mail.com',
+			'name'    : 'John Doe',
+			'email'   : 'john.doe@mail.com',
 			'friends' : [
 				{
 					'name' : 'Peter',
-					'id' : '122-ad-001'
+					'id'   : '122-ad-001'
 				},
 				{
 					'name' : 'Peter',
-					'id' : '122-ad-001'
+					'id'   : '122-ad-001'
 				},
 				{
 					'name' : 'Peter',
-					'id' : '122-ad-001'
+					'id'   : '122-ad-001'
 				},
 				{
 					'name' : 'Peter',
-					'id' : '122-ad-001'
+					'id'   : '122-ad-001'
 				}
-			]
+			],
+			'enemies' : []
 		},
-		'enemies' : []
 
 		function addNameFn () {
 			self.nameArr.push( self.addName );
