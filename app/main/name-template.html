@@ -1,15 +1,23 @@
 <td>
-	<input type="text" ng-show="vm.edit" ng-model="name.firstName">
-	<span ng-hide="vm.edit"> {{ name.firstName }} </span>
+	<input type="text" ng-if="vm.edit" ng-model="vm.nameCopy.firstName">
+	<span ng-if="!vm.edit"> {{ vm.name.firstName }} </span>
 </td>
 <td>
-	<input type="text" ng-show="vm.edit" ng-model="name.lastName">
-	<span ng-hide="vm.edit"> {{ name.lastName }} </span>
+	<input type="text" ng-if="vm.edit" ng-model="vm.nameCopy.lastName">
+	<span ng-if="!vm.edit"> {{ vm.name.lastName }} </span>
 </td>
 <td>
-	<input type="text" ng-show="vm.edit" ng-model="name.count">
-	<span ng-hide="vm.edit"> {{ name.count }} </span>
+	<input type="text" ng-if="vm.edit" ng-model="vm.nameCopy.count">
+	<span ng-if="!vm.edit"> {{ vm.name.count }} </span>
 </td>
 <td>
-	<button class = "btn btn-default" ng-click='vm.edit=!vm.edit'> Edit</button>
+	<button class = "btn btn-default" ng-click='vm.edit=!vm.edit'>
+		<span ng-if="!vm.edit">Edit</span>
+		<span ng-if="vm.edit">Close</span>
+	</button>
+</td>
+<td>
+	<button class = "btn btn-default" ng-click="vm.deleteMdl(vm.name)">
+		Delete
+	</button>
 </td>

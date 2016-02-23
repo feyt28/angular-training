@@ -8,24 +8,28 @@
 	//C - class
 	//E - element
 
-	function link ( scope ) {
+	// function link ( scope ) {
 
-		function increment () {
-			scope.name.count++;
-		}
+	// 	function increment () {
+	// 		scope.name.count++;
+	// 	}
 
-		scope.increment = increment;
+	// 	scope.increment = increment;
 
-	}
+	// }
 
 	function nameItems() {
 		return {
 			'scope': {
-				'name': ' = ' //string
+				'name'      : '=', //string
+				'deleteMdl' : '='
 			},
-			'templateUrl' : '/main/name-template.html',
-			'link'        : link,
-			'restrict'    : 'A'
+			'templateUrl'      : '/main/name-template.html',
+			// 'link'          : link,
+			'controller'       : 'nameItemsCtrl',
+			'controllerAs'     : 'vm',
+			'restrict'         : 'A',
+			'bindToController' : true
 		};
 	}
 
